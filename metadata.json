@@ -1,0 +1,8 @@
+
+{
+  "name": "Dharma Calendar - Vedic Panchang",
+  "description": "A beautiful Hindu lunisolar calendar app designed as a mobile lock screen, providing daily Tithi, Nakshatra, Yoga, and Vedic insights driven by AI.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

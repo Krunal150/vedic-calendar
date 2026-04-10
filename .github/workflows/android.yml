@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/upload-artifact@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/upload-artifact@v4
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Install Cordova
         run: npm install -g cordova
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Add Android Platform
         run: cordova platform add android
@@ -34,4 +34,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: platforms/android/app/build/outputs/apk/
+          path: |
+            platforms/android/app/build/outputs/apk/debug/app-debug.apk
